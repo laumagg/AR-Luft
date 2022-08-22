@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8634324793997057633
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 153766493493859255, guid: 5f257490588e7f94c9ab2b8f6cc099f6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 153766493493859255, guid: 5f257490588e7f94c9ab2b8f6cc099f6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 561177110518205054, guid: 5f257490588e7f94c9ab2b8f6cc099f6, type: 3}
+      propertyPath: m_isOrthographic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986974626460271470, guid: 5f257490588e7f94c9ab2b8f6cc099f6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986974626460271470, guid: 5f257490588e7f94c9ab2b8f6cc099f6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414240960810153733, guid: 5f257490588e7f94c9ab2b8f6cc099f6, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414240960810153733, guid: 5f257490588e7f94c9ab2b8f6cc099f6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414240960810153733, guid: 5f257490588e7f94c9ab2b8f6cc099f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414240960810153733, guid: 5f257490588e7f94c9ab2b8f6cc099f6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414240960810153733, guid: 5f257490588e7f94c9ab2b8f6cc099f6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414240960810153733, guid: 5f257490588e7f94c9ab2b8f6cc099f6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414240960810153733, guid: 5f257490588e7f94c9ab2b8f6cc099f6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414240960810153733, guid: 5f257490588e7f94c9ab2b8f6cc099f6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414240960810153733, guid: 5f257490588e7f94c9ab2b8f6cc099f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414240960810153733, guid: 5f257490588e7f94c9ab2b8f6cc099f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414240960810153733, guid: 5f257490588e7f94c9ab2b8f6cc099f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5416279844103639583, guid: 5f257490588e7f94c9ab2b8f6cc099f6, type: 3}
+      propertyPath: m_Name
+      value: Y PointPrefab Variant Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5f257490588e7f94c9ab2b8f6cc099f6, type: 3}
+--- !u!1 &6544042590765958133 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3243247830041304468, guid: 5f257490588e7f94c9ab2b8f6cc099f6, type: 3}
+  m_PrefabInstance: {fileID: 8634324793997057633}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7646835877171529680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6544042590765958133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fc3ce8eb675fa64da950c2df6e1ec30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxDistanceToLook: 2
+  InverseForward: 0
