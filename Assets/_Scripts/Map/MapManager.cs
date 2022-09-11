@@ -4,6 +4,7 @@ using ARLuft.Data;
 using Mapbox.Unity.Map;
 using Mapbox.Utils;
 using Mapbox.Unity.Utilities;
+using UnityEngine.UI;
 
 namespace ARLuft.Map
 {
@@ -19,6 +20,10 @@ namespace ARLuft.Map
         [SerializeField] private Color suburbStationColor;
         [SerializeField] private Color backgroundStationColor;
 
+        [Header("Legend")]
+        [SerializeField] private Image trafficLegendImage;
+        [SerializeField] private Image suburbLegendImage;
+        [SerializeField] private Image backgroundLegendImage;
 
         private string[] _locationStrings;
         private Vector2d[] _locations;
@@ -32,6 +37,13 @@ namespace ARLuft.Map
         private void OnDisable()
         {
             DataManager.Instance.StationsDataAvailable?.RemoveListener(SpawnDataOnMap);
+        }
+
+        private void Start()
+        {
+            trafficLegendImage.color = trafficStationColor;
+            backgroundLegendImage.color = backgroundStationColor;
+            suburbLegendImage.color = suburbStationColor;
         }
 
         private void SpawnDataOnMap()

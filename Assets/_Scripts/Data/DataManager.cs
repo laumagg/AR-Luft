@@ -53,9 +53,9 @@ namespace ARLuft.Data
         {
             routinesRunning = RootStations.data.Length;
 
-            foreach (StationsData data in RootStations.data)
+            foreach (StationsData station in RootStations.data)
             {
-                StartCoroutine(requestManager.GetYearData(data.code, SelectedPollutantForAR.core));
+                StartCoroutine(requestManager.GetYearData(station.code, SelectedPollutantForAR.core));
             }
 
             while (routinesRunning > 0)
@@ -88,25 +88,25 @@ namespace ARLuft.Data
         private void SimplifyGraphData()
         {
             GraphDataList = new();
+
+            // RootYearPollution is a list of arrays of PollutantData
             foreach (RootPollutantData rootData in RootYearPollution)
             {
                 foreach (PollutantData pollData in rootData.data)
                 {
                     GraphData data = new();
+
+                    // Gets station name based on station code
                     data.Station = GetStationName(pollData.station);
+                    // Annual average
                     data.PollutantValue = pollData.value;
-                    data.Year = ChangeDateTimeToYear(pollData.datetime);
+                    // Save only year of datetime string
+                    data.Year = pollData.datetime[..4];
 
                     GraphDataList.Add(data);
                 }
             }
         }
-        private string ChangeDateTimeToYear(string dateTime)
-        {
-            //Get only year of datetime string
-            return dateTime[..4];
-        }
-
 
         private void OnDestroy()
         {

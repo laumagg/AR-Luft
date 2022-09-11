@@ -24,7 +24,7 @@ namespace ARLuft
         [SerializeField] private Transform YZPlane;
 
         [Header("Others")]
-        [SerializeField] private int valueRangeQuantity = 10;
+        [SerializeField] private int rangeQuantity = 10;
 
         private int _xAxisLength, _yAxisLength, _zAxisLength;
         private List<string> _xAxisLabels, _yAxisLabels, _zAxisLabels;
@@ -60,7 +60,7 @@ namespace ARLuft
             //Labels of axes 
             foreach (GraphData graphData in DataManager.Instance.GraphDataList)
             {
-                //x axis
+                //x values
                 if (!_xAxisLabels.Contains(graphData.Year))
                     _xAxisLabels.Add(graphData.Year);
 
@@ -98,16 +98,19 @@ namespace ARLuft
         }
         private List<string> CreateValueRanges(int maxValue, int minValue = 0)
         {
-            List<string> rangesList = new();
+            List<string> rangesList = new(); //Labels list
 
-            //Setup
-            int[] rangeDivisions = new int[valueRangeQuantity + 1];
-            _rangeDistance = Mathf.RoundToInt(maxValue / valueRangeQuantity) + 1;
+            // rangeQuantity is the number of ranges in which a dataset is to be divided
+            int[] rangeDivisions = new int[rangeQuantity + 1];
+            // Range dimension based on range quantity and biggest value
+            _rangeDistance = Mathf.RoundToInt(maxValue / rangeQuantity) + 1;
 
             for (int i = 0; i < rangeDivisions.Length; i++)
             {
+                // Start with smallest value
                 if (i == 0)
                     rangeDivisions[i] = minValue;
+                // Add the range dimension to last value
                 else
                     rangeDivisions[i] = rangeDivisions[i - 1] + _rangeDistance;
 
@@ -166,7 +169,7 @@ namespace ARLuft
                 //instantiation
                 GraphLabels temp = Instantiate(XYZPoint[0], transform.position, transform.rotation, transform);
                 temp.transform.localPosition = position;
-                
+
                 //Save to list
                 _xAxisPointsList.Add(temp);
             }
