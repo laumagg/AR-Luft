@@ -25,17 +25,7 @@ namespace ARLuft.UI
         //Counter
         public void ShowCounter(bool enable)
         {
-            if (enable)
-            {
-                _counterText.gameObject.SetActive(true);
-                _counterText.gameObject.LeanMoveLocalY(-500, 0.5f).setEaseInExpo();
-                return;
-            }
-
-            _counterText.gameObject.LeanMoveLocalY(-Screen.height, 0.5f).setEaseInExpo().setOnComplete(() =>
-            {
-                _counterText.gameObject.SetActive(false);
-            });
+            _counterText.gameObject.SetActive(enable);
         }
         public void DecreaseCounterByOne()
         {
